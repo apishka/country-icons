@@ -5,6 +5,7 @@
     "serve": "grunt proxy"
   },
   "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.5",
     "connect-livereload": "^0.6.0",
     "eol": "^0.4.0",
     "grunt": "^1.0.1",
