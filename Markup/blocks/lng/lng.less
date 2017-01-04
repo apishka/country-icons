@@ -1,0 +1,52 @@
+@css-path: '../images';
+
+.lng {
+	background-size: contain;
+	background-position: 50%;
+	background-repeat: no-repeat;
+	position: relative;
+	display: inline-block;
+	width: 24px;
+	height: 18px;
+	line-height: inherit;
+	line-height: 1.2em;
+	vertical-align: middle;
+
+	&:before {
+		content: "\00a0";
+	}
+
+	&._xs {
+		width: 12px;
+		height: 9px;
+	}
+
+	&._sm {
+		width: 16px;
+		height: 12px;
+	}
+
+	&._md {
+		width: 32px;
+		height: 24px;
+	}
+
+	&._lg {
+		width: 64px;
+		height: 48px;
+	}
+
+	&._xlg {
+		width: 128px;
+		height: 96px;
+	}
+
+}
+
+.lng-icon(@country) {
+
+	.lng-@{country} {
+		background-image: ~"url(@{css-path}/@{country}.svg)";
+	}
+
+}
