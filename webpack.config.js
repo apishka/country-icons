@@ -1,39 +1,37 @@
-!function()
+!function ()
 {
     "use strict";
-    
+
     const ENV               = process.env.NODE_ENV || 'development';
     const webpack           = require('webpack');
     const path              = require('path');
     const isDev             = () => ENV === 'development';
     const ExtractTextPlugin = require("extract-text-webpack-plugin");
     const HtmlWebpackPlugin = require('html-webpack-plugin');
-    
+
     let extractCSS = new ExtractTextPlugin('[name].css', { allChunks: true });
-    
-    
+
+
     module.exports = {
         context: __dirname,
-        
+
         entry : {
-            index: ['webpack-dev-server/client?localhost:8080', "language-icons/index"]
+            index: path.resolve('language-icons/index')
         },
         output: {
-            path      : __dirname + '/language-icons/build',
+            path      : path.resolve('language-icons/build'),
             filename  : "[name].js",
-            publicPath: ''
+            publicPath: '/language-icons/build/'
         },
-        
+
         plugins: [
-            new webpack.HotModuleReplacementPlugin(),
             new webpack.ProvidePlugin(
                 {
                     angular: 'angular'
                 }
             ),
-            new webpack.ContextReplacementPlugin(/node_modules/, /\*.js$/),
             extractCSS,
-            
+
             new webpack.NoErrorsPlugin(),
             new webpack.SourceMapDevToolPlugin(
                 {
@@ -49,29 +47,29 @@
 
             new HtmlWebpackPlugin(
                 {
-                    template: 'language-icons/modules/page/main.html'
+                    template: 'language-icons/modules/page/main.html',
+                    filename: '../index.html'
                 }
             ),
-            
+
             new webpack.EnvironmentPlugin('NODE_ENV')
         ],
-        
+
         resolve: {
             root      : [
                 path.resolve('language-icons/modules'),
-                path.resolve('node_modules'),
-                path.resolve('./')
+                path.resolve('node_modules')
             ],
             extensions: ["", ".js"]
         },
-        
+
         resolveLoader: {
             modulesDirectories: ["node_modules"],
             extensions        : ["", ".js"],
             moduleTemplates   : ['*-loader', '*'],
             packageMains      : ["webpackLoader", "webLoader", "loader", "main"]
         },
-        
+
         module: {
             loaders: [
                 {
@@ -99,15 +97,16 @@
                     loader: "raw-loader"
                 }
             ],
-            
+
             noParse: [/\/(node_modules|bower_modules)\/(angular\/angular|jquery)/] // no search require, command for webpack
         },
-        
+
         devServer: {
             host       : 'localhost',
             port       : 8080,
             contentBase: __dirname,
-            hot        : true
+            hot        : true,
+            inline     : true
         }
     };
 }()
