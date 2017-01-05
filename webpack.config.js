@@ -9,8 +9,8 @@
     const ExtractTextPlugin = require("extract-text-webpack-plugin");
     const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-    let extractCSS = new ExtractTextPlugin('[name].css', { allChunks: true });
-
+    const languages  = require('./languages.json');
+    const extractCSS = new ExtractTextPlugin('[name].css', { allChunks: true });
 
     module.exports = {
         context: __dirname,
@@ -47,8 +47,9 @@
 
             new HtmlWebpackPlugin(
                 {
-                    template: 'src/modules/page/main.html',
-                    filename: '../index.html'
+                    template: 'src/modules/page/main.hbs',
+                    filename: '../index.html',
+                    language: languages.list
                 }
             ),
 
@@ -95,7 +96,8 @@
                 {
                     test  : /\.html$/,
                     loader: "raw-loader"
-                }
+                },
+                { test: /\.hbs$/, loader: "handlebars" }
             ],
 
             noParse: [/\/(node_modules|bower_modules)\/(angular\/angular|jquery)/] // no search require, command for webpack
