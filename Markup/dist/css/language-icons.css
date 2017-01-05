@@ -1,0 +1,783 @@
+.lng {
+  -webkit-background-size: contain;
+          background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+  display: inline-block;
+  width: 24px;
+  height: 18px;
+  line-height: inherit;
+  line-height: 1.2em;
+  vertical-align: middle;
+}
+.lng:before {
+  content: "\00a0";
+}
+.lng._xs {
+  width: 12px;
+  height: 9px;
+}
+.lng._sm {
+  width: 16px;
+  height: 12px;
+}
+.lng._md {
+  width: 32px;
+  height: 24px;
+}
+.lng._lg {
+  width: 64px;
+  height: 48px;
+}
+.lng._xlg {
+  width: 128px;
+  height: 96px;
+}
+.lng-ad {
+  background-image: url(../images/ad.svg);
+}
+.lng-ae {
+  background-image: url(../images/ae.svg);
+}
+.lng-af {
+  background-image: url(../images/af.svg);
+}
+.lng-ag {
+  background-image: url(../images/ag.svg);
+}
+.lng-ai {
+  background-image: url(../images/ai.svg);
+}
+.lng-al {
+  background-image: url(../images/al.svg);
+}
+.lng-am {
+  background-image: url(../images/am.svg);
+}
+.lng-ao {
+  background-image: url(../images/ao.svg);
+}
+.lng-aq {
+  background-image: url(../images/aq.svg);
+}
+.lng-ar {
+  background-image: url(../images/ar.svg);
+}
+.lng-as {
+  background-image: url(../images/as.svg);
+}
+.lng-at {
+  background-image: url(../images/at.svg);
+}
+.lng-au {
+  background-image: url(../images/au.svg);
+}
+.lng-aw {
+  background-image: url(../images/aw.svg);
+}
+.lng-ax {
+  background-image: url(../images/ax.svg);
+}
+.lng-az {
+  background-image: url(../images/az.svg);
+}
+.lng-ba {
+  background-image: url(../images/ba.svg);
+}
+.lng-bb {
+  background-image: url(../images/bb.svg);
+}
+.lng-bd {
+  background-image: url(../images/bd.svg);
+}
+.lng-be {
+  background-image: url(../images/be.svg);
+}
+.lng-bf {
+  background-image: url(../images/bf.svg);
+}
+.lng-bg {
+  background-image: url(../images/bg.svg);
+}
+.lng-bh {
+  background-image: url(../images/bh.svg);
+}
+.lng-bi {
+  background-image: url(../images/bi.svg);
+}
+.lng-bj {
+  background-image: url(../images/bj.svg);
+}
+.lng-bl {
+  background-image: url(../images/bl.svg);
+}
+.lng-bm {
+  background-image: url(../images/bm.svg);
+}
+.lng-bn {
+  background-image: url(../images/bn.svg);
+}
+.lng-bo {
+  background-image: url(../images/bo.svg);
+}
+.lng-bq {
+  background-image: url(../images/bq.svg);
+}
+.lng-br {
+  background-image: url(../images/br.svg);
+}
+.lng-bs {
+  background-image: url(../images/bs.svg);
+}
+.lng-bt {
+  background-image: url(../images/bt.svg);
+}
+.lng-bv {
+  background-image: url(../images/bv.svg);
+}
+.lng-bw {
+  background-image: url(../images/bw.svg);
+}
+.lng-by {
+  background-image: url(../images/by.svg);
+}
+.lng-bz {
+  background-image: url(../images/bz.svg);
+}
+.lng-ca {
+  background-image: url(../images/ca.svg);
+}
+.lng-cc {
+  background-image: url(../images/cc.svg);
+}
+.lng-cd {
+  background-image: url(../images/cd.svg);
+}
+.lng-cf {
+  background-image: url(../images/cf.svg);
+}
+.lng-cg {
+  background-image: url(../images/cg.svg);
+}
+.lng-ch {
+  background-image: url(../images/ch.svg);
+}
+.lng-ci {
+  background-image: url(../images/ci.svg);
+}
+.lng-ck {
+  background-image: url(../images/ck.svg);
+}
+.lng-cl {
+  background-image: url(../images/cl.svg);
+}
+.lng-cm {
+  background-image: url(../images/cm.svg);
+}
+.lng-cn {
+  background-image: url(../images/cn.svg);
+}
+.lng-co {
+  background-image: url(../images/co.svg);
+}
+.lng-cr {
+  background-image: url(../images/cr.svg);
+}
+.lng-cu {
+  background-image: url(../images/cu.svg);
+}
+.lng-cv {
+  background-image: url(../images/cv.svg);
+}
+.lng-cw {
+  background-image: url(../images/cw.svg);
+}
+.lng-cx {
+  background-image: url(../images/cx.svg);
+}
+.lng-cy {
+  background-image: url(../images/cy.svg);
+}
+.lng-cz {
+  background-image: url(../images/cz.svg);
+}
+.lng-de {
+  background-image: url(../images/de.svg);
+}
+.lng-dj {
+  background-image: url(../images/dj.svg);
+}
+.lng-dk {
+  background-image: url(../images/dk.svg);
+}
+.lng-dm {
+  background-image: url(../images/dm.svg);
+}
+.lng-do {
+  background-image: url(../images/do.svg);
+}
+.lng-dz {
+  background-image: url(../images/dz.svg);
+}
+.lng-ec {
+  background-image: url(../images/ec.svg);
+}
+.lng-ee {
+  background-image: url(../images/ee.svg);
+}
+.lng-eg {
+  background-image: url(../images/eg.svg);
+}
+.lng-eh {
+  background-image: url(../images/eh.svg);
+}
+.lng-er {
+  background-image: url(../images/er.svg);
+}
+.lng-es {
+  background-image: url(../images/es.svg);
+}
+.lng-et {
+  background-image: url(../images/et.svg);
+}
+.lng-fi {
+  background-image: url(../images/fi.svg);
+}
+.lng-fj {
+  background-image: url(../images/fj.svg);
+}
+.lng-fk {
+  background-image: url(../images/fk.svg);
+}
+.lng-fm {
+  background-image: url(../images/fm.svg);
+}
+.lng-fo {
+  background-image: url(../images/fo.svg);
+}
+.lng-fr {
+  background-image: url(../images/fr.svg);
+}
+.lng-ga {
+  background-image: url(../images/ga.svg);
+}
+.lng-gb {
+  background-image: url(../images/gb.svg);
+}
+.lng-gd {
+  background-image: url(../images/gd.svg);
+}
+.lng-ge {
+  background-image: url(../images/ge.svg);
+}
+.lng-gf {
+  background-image: url(../images/gf.svg);
+}
+.lng-gg {
+  background-image: url(../images/gg.svg);
+}
+.lng-gh {
+  background-image: url(../images/gh.svg);
+}
+.lng-gi {
+  background-image: url(../images/gi.svg);
+}
+.lng-gl {
+  background-image: url(../images/gl.svg);
+}
+.lng-gm {
+  background-image: url(../images/gm.svg);
+}
+.lng-gn {
+  background-image: url(../images/gn.svg);
+}
+.lng-gp {
+  background-image: url(../images/gp.svg);
+}
+.lng-gq {
+  background-image: url(../images/gq.svg);
+}
+.lng-gr {
+  background-image: url(../images/gr.svg);
+}
+.lng-gs {
+  background-image: url(../images/gs.svg);
+}
+.lng-gt {
+  background-image: url(../images/gt.svg);
+}
+.lng-gu {
+  background-image: url(../images/gu.svg);
+}
+.lng-gw {
+  background-image: url(../images/gw.svg);
+}
+.lng-gy {
+  background-image: url(../images/gy.svg);
+}
+.lng-hk {
+  background-image: url(../images/hk.svg);
+}
+.lng-hm {
+  background-image: url(../images/hm.svg);
+}
+.lng-hn {
+  background-image: url(../images/hn.svg);
+}
+.lng-hr {
+  background-image: url(../images/hr.svg);
+}
+.lng-ht {
+  background-image: url(../images/ht.svg);
+}
+.lng-hu {
+  background-image: url(../images/hu.svg);
+}
+.lng-id {
+  background-image: url(../images/id.svg);
+}
+.lng-ie {
+  background-image: url(../images/ie.svg);
+}
+.lng-il {
+  background-image: url(../images/il.svg);
+}
+.lng-im {
+  background-image: url(../images/im.svg);
+}
+.lng-in {
+  background-image: url(../images/in.svg);
+}
+.lng-io {
+  background-image: url(../images/io.svg);
+}
+.lng-iq {
+  background-image: url(../images/iq.svg);
+}
+.lng-ir {
+  background-image: url(../images/ir.svg);
+}
+.lng-is {
+  background-image: url(../images/is.svg);
+}
+.lng-it {
+  background-image: url(../images/it.svg);
+}
+.lng-je {
+  background-image: url(../images/je.svg);
+}
+.lng-jm {
+  background-image: url(../images/jm.svg);
+}
+.lng-jo {
+  background-image: url(../images/jo.svg);
+}
+.lng-jp {
+  background-image: url(../images/jp.svg);
+}
+.lng-ke {
+  background-image: url(../images/ke.svg);
+}
+.lng-kg {
+  background-image: url(../images/kg.svg);
+}
+.lng-kh {
+  background-image: url(../images/kh.svg);
+}
+.lng-ki {
+  background-image: url(../images/ki.svg);
+}
+.lng-km {
+  background-image: url(../images/km.svg);
+}
+.lng-kn {
+  background-image: url(../images/kn.svg);
+}
+.lng-kp {
+  background-image: url(../images/kp.svg);
+}
+.lng-kr {
+  background-image: url(../images/kr.svg);
+}
+.lng-kw {
+  background-image: url(../images/kw.svg);
+}
+.lng-ky {
+  background-image: url(../images/ky.svg);
+}
+.lng-kz {
+  background-image: url(../images/kz.svg);
+}
+.lng-la {
+  background-image: url(../images/la.svg);
+}
+.lng-lb {
+  background-image: url(../images/lb.svg);
+}
+.lng-lc {
+  background-image: url(../images/lc.svg);
+}
+.lng-li {
+  background-image: url(../images/li.svg);
+}
+.lng-lk {
+  background-image: url(../images/lk.svg);
+}
+.lng-lr {
+  background-image: url(../images/lr.svg);
+}
+.lng-ls {
+  background-image: url(../images/ls.svg);
+}
+.lng-lt {
+  background-image: url(../images/lt.svg);
+}
+.lng-lu {
+  background-image: url(../images/lu.svg);
+}
+.lng-lv {
+  background-image: url(../images/lv.svg);
+}
+.lng-ly {
+  background-image: url(../images/ly.svg);
+}
+.lng-ma {
+  background-image: url(../images/ma.svg);
+}
+.lng-mc {
+  background-image: url(../images/mc.svg);
+}
+.lng-md {
+  background-image: url(../images/md.svg);
+}
+.lng-me {
+  background-image: url(../images/me.svg);
+}
+.lng-mf {
+  background-image: url(../images/mf.svg);
+}
+.lng-mg {
+  background-image: url(../images/mg.svg);
+}
+.lng-mh {
+  background-image: url(../images/mh.svg);
+}
+.lng-mk {
+  background-image: url(../images/mk.svg);
+}
+.lng-ml {
+  background-image: url(../images/ml.svg);
+}
+.lng-mm {
+  background-image: url(../images/mm.svg);
+}
+.lng-mn {
+  background-image: url(../images/mn.svg);
+}
+.lng-mo {
+  background-image: url(../images/mo.svg);
+}
+.lng-mp {
+  background-image: url(../images/mp.svg);
+}
+.lng-mq {
+  background-image: url(../images/mq.svg);
+}
+.lng-mr {
+  background-image: url(../images/mr.svg);
+}
+.lng-ms {
+  background-image: url(../images/ms.svg);
+}
+.lng-mt {
+  background-image: url(../images/mt.svg);
+}
+.lng-mu {
+  background-image: url(../images/mu.svg);
+}
+.lng-mv {
+  background-image: url(../images/mv.svg);
+}
+.lng-mw {
+  background-image: url(../images/mw.svg);
+}
+.lng-mx {
+  background-image: url(../images/mx.svg);
+}
+.lng-my {
+  background-image: url(../images/my.svg);
+}
+.lng-mz {
+  background-image: url(../images/mz.svg);
+}
+.lng-na {
+  background-image: url(../images/na.svg);
+}
+.lng-nc {
+  background-image: url(../images/nc.svg);
+}
+.lng-ne {
+  background-image: url(../images/ne.svg);
+}
+.lng-nf {
+  background-image: url(../images/nf.svg);
+}
+.lng-ng {
+  background-image: url(../images/ng.svg);
+}
+.lng-ni {
+  background-image: url(../images/ni.svg);
+}
+.lng-nl {
+  background-image: url(../images/nl.svg);
+}
+.lng-no {
+  background-image: url(../images/no.svg);
+}
+.lng-np {
+  background-image: url(../images/np.svg);
+}
+.lng-nr {
+  background-image: url(../images/nr.svg);
+}
+.lng-nu {
+  background-image: url(../images/nu.svg);
+}
+.lng-nz {
+  background-image: url(../images/nz.svg);
+}
+.lng-om {
+  background-image: url(../images/om.svg);
+}
+.lng-pa {
+  background-image: url(../images/pa.svg);
+}
+.lng-pe {
+  background-image: url(../images/pe.svg);
+}
+.lng-pf {
+  background-image: url(../images/pf.svg);
+}
+.lng-pg {
+  background-image: url(../images/pg.svg);
+}
+.lng-ph {
+  background-image: url(../images/ph.svg);
+}
+.lng-pk {
+  background-image: url(../images/pk.svg);
+}
+.lng-pl {
+  background-image: url(../images/pl.svg);
+}
+.lng-pm {
+  background-image: url(../images/pm.svg);
+}
+.lng-pn {
+  background-image: url(../images/pn.svg);
+}
+.lng-pr {
+  background-image: url(../images/pr.svg);
+}
+.lng-ps {
+  background-image: url(../images/ps.svg);
+}
+.lng-pt {
+  background-image: url(../images/pt.svg);
+}
+.lng-pw {
+  background-image: url(../images/pw.svg);
+}
+.lng-py {
+  background-image: url(../images/py.svg);
+}
+.lng-qa {
+  background-image: url(../images/qa.svg);
+}
+.lng-re {
+  background-image: url(../images/re.svg);
+}
+.lng-ro {
+  background-image: url(../images/ro.svg);
+}
+.lng-rs {
+  background-image: url(../images/rs.svg);
+}
+.lng-ru {
+  background-image: url(../images/ru.svg);
+}
+.lng-rw {
+  background-image: url(../images/rw.svg);
+}
+.lng-sa {
+  background-image: url(../images/sa.svg);
+}
+.lng-sb {
+  background-image: url(../images/sb.svg);
+}
+.lng-sc {
+  background-image: url(../images/sc.svg);
+}
+.lng-sd {
+  background-image: url(../images/sd.svg);
+}
+.lng-se {
+  background-image: url(../images/se.svg);
+}
+.lng-sg {
+  background-image: url(../images/sg.svg);
+}
+.lng-sh {
+  background-image: url(../images/sh.svg);
+}
+.lng-si {
+  background-image: url(../images/si.svg);
+}
+.lng-sj {
+  background-image: url(../images/sj.svg);
+}
+.lng-sk {
+  background-image: url(../images/sk.svg);
+}
+.lng-sl {
+  background-image: url(../images/sl.svg);
+}
+.lng-sm {
+  background-image: url(../images/sm.svg);
+}
+.lng-sn {
+  background-image: url(../images/sn.svg);
+}
+.lng-so {
+  background-image: url(../images/so.svg);
+}
+.lng-sr {
+  background-image: url(../images/sr.svg);
+}
+.lng-ss {
+  background-image: url(../images/ss.svg);
+}
+.lng-st {
+  background-image: url(../images/st.svg);
+}
+.lng-sv {
+  background-image: url(../images/sv.svg);
+}
+.lng-sx {
+  background-image: url(../images/sx.svg);
+}
+.lng-sy {
+  background-image: url(../images/sy.svg);
+}
+.lng-sz {
+  background-image: url(../images/sz.svg);
+}
+.lng-tc {
+  background-image: url(../images/tc.svg);
+}
+.lng-td {
+  background-image: url(../images/td.svg);
+}
+.lng-tf {
+  background-image: url(../images/tf.svg);
+}
+.lng-tg {
+  background-image: url(../images/tg.svg);
+}
+.lng-th {
+  background-image: url(../images/th.svg);
+}
+.lng-tj {
+  background-image: url(../images/tj.svg);
+}
+.lng-tk {
+  background-image: url(../images/tk.svg);
+}
+.lng-tl {
+  background-image: url(../images/tl.svg);
+}
+.lng-tm {
+  background-image: url(../images/tm.svg);
+}
+.lng-tn {
+  background-image: url(../images/tn.svg);
+}
+.lng-to {
+  background-image: url(../images/to.svg);
+}
+.lng-tr {
+  background-image: url(../images/tr.svg);
+}
+.lng-tt {
+  background-image: url(../images/tt.svg);
+}
+.lng-tv {
+  background-image: url(../images/tv.svg);
+}
+.lng-tw {
+  background-image: url(../images/tw.svg);
+}
+.lng-tz {
+  background-image: url(../images/tz.svg);
+}
+.lng-ua {
+  background-image: url(../images/ua.svg);
+}
+.lng-ug {
+  background-image: url(../images/ug.svg);
+}
+.lng-um {
+  background-image: url(../images/um.svg);
+}
+.lng-us {
+  background-image: url(../images/us.svg);
+}
+.lng-uy {
+  background-image: url(../images/uy.svg);
+}
+.lng-uz {
+  background-image: url(../images/uz.svg);
+}
+.lng-va {
+  background-image: url(../images/va.svg);
+}
+.lng-vc {
+  background-image: url(../images/vc.svg);
+}
+.lng-ve {
+  background-image: url(../images/ve.svg);
+}
+.lng-vg {
+  background-image: url(../images/vg.svg);
+}
+.lng-vi {
+  background-image: url(../images/vi.svg);
+}
+.lng-vn {
+  background-image: url(../images/vn.svg);
+}
+.lng-vu {
+  background-image: url(../images/vu.svg);
+}
+.lng-wf {
+  background-image: url(../images/wf.svg);
+}
+.lng-ws {
+  background-image: url(../images/ws.svg);
+}
+.lng-ye {
+  background-image: url(../images/ye.svg);
+}
+.lng-yt {
+  background-image: url(../images/yt.svg);
+}
+.lng-za {
+  background-image: url(../images/za.svg);
+}
+.lng-zm {
+  background-image: url(../images/zm.svg);
+}
+.lng-zw {
+  background-image: url(../images/zw.svg);
+}

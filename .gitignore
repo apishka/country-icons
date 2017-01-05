@@ -3,5 +3,4 @@
 /composer.lock
 /vendor/
 /node_modules/
-/Markup/dist/
 *.map
