@@ -7,6 +7,7 @@
     const path              = require('path');
     const isDev             = () => ENV === 'development';
     const ExtractTextPlugin = require("extract-text-webpack-plugin");
+    const HtmlWebpackPlugin = require('html-webpack-plugin');
     
     let extractCSS = new ExtractTextPlugin('[name].css', { allChunks: true });
     
@@ -15,18 +16,20 @@
         context: __dirname + '/language-icons',
         
         entry : {
-            index: "./index"
+            index: ['webpack-dev-server/client?localhost:8080', "./index"]
         },
         output: {
             path      : __dirname + '/language-icons/build',
             filename  : "[name].js",
-            library   : "[name]"
+            library   : "[name]",
+            publicPath: '/'
         },
         
         plugins: [
+            new webpack.HotModuleReplacementPlugin(),
             new webpack.ProvidePlugin(
                 {
-                    jQuery  : 'jquery/dist/jquery.min'
+                    angular: 'angular'
                 }
             ),
             new webpack.ContextReplacementPlugin(/node_modules/, /\*.js$/),
@@ -42,6 +45,12 @@
                         /node_modules\/.+\.js/,
                         'index.js'
                     ]
+                }
+            ),
+
+            new HtmlWebpackPlugin(
+                {
+                    template: 'index.html'
                 }
             ),
             
@@ -75,12 +84,20 @@
                     }
                 },
                 {
+                    test  : /\.less/,
+                    loader: extractCSS.extract('style', 'css!postcss-loader?browsers=last 2 version!less')
+                },
+                {
                     test  : /\.css$/,
                     loader: extractCSS.extract('style', 'css!postcss-loader?browsers=last 2 version')
                 },
                 {
                     test  : /\.(png|gif|jpg|svg|ttf|eot|woff|woff2)$/,
                     loader: 'url?name=[path][name].[ext]?[hash]&limit=4096'
+                },
+                {
+                    test  : /\.html$/,
+                    loader: "raw-loader"
                 }
             ],
             

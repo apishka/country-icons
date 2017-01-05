@@ -6683,5 +6683,8 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
     display: none !important;
   }
 }
-/*# sourceMappingURL=bootstrap.css.map */
+/*# sourceMappingURL=bootstrap.css.map */#container {
+  padding-top: 68px;
+}
+
 /*# sourceMappingURL=index.css.map*/
