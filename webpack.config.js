@@ -47,7 +47,7 @@
 
             new HtmlWebpackPlugin(
                 {
-                    template: 'src/modules/page/main.hbs',
+                    template: 'src/modules/page/main.html',
                     filename: '../index.html',
                     language: languages.list
                 }
@@ -58,6 +58,7 @@
 
         resolve: {
             root      : [
+                __dirname,
                 path.resolve('src/modules'),
                 path.resolve('node_modules')
             ],
@@ -82,8 +83,12 @@
                     }
                 },
                 {
-                    test  : /\.less/,
+                    test  : /\.less$/,
                     loader: extractCSS.extract('style', 'css!postcss-loader?browsers=last 2 version!less')
+                },
+                {
+                    test  : /\.json$/,
+                    loader: 'json-loader'
                 },
                 {
                     test  : /\.css$/,
@@ -96,8 +101,7 @@
                 {
                     test  : /\.html$/,
                     loader: "raw-loader"
-                },
-                { test: /\.hbs$/, loader: "handlebars" }
+                }
             ],
 
             noParse: [/\/(node_modules|bower_modules)\/(angular\/angular|jquery)/] // no search require, command for webpack

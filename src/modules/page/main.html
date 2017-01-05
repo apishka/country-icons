@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="Markup/dist/css/language-icons.css"/>
     <link href="/language-icons/build/index.css" rel="stylesheet">
 </head>
-<body>
+<body ng-app>
 
 <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
     <div class="container">
@@ -31,12 +31,15 @@
             </div>
 
             <hr>
+            <label>Name:</label>
+            <input type="text" ng-model="yourName" placeholder="Enter a name here">
+            <hr>
+            <h1>Hello {{yourName}}!</h1>
+            <hr>
 
             <div class="">
                 <div class="languages">
-                    {{#each htmlWebpackPlugin.options.language}}
-                        <span class="lng lng-{{this}} _lg" title="{{this}}" id="{{this}}"></span>
-                    {{/each}}
+
                 </div>
             </div><!--/span-->
         </div><!--/span-->
