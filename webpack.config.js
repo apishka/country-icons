@@ -8,7 +8,7 @@
     const isDev             = () => ENV === 'development';
     const ExtractTextPlugin = require("extract-text-webpack-plugin");
     
-    let extractCSS = new ExtractTextPlugin('[name].[hash].css', { allChunks: true });
+    let extractCSS = new ExtractTextPlugin('[name].css', { allChunks: true });
     
     
     module.exports = {
@@ -68,7 +68,7 @@
             loaders: [
                 {
                     test   : /\.js$/,
-                    include: [__dirname + '/src'],
+                    include: [__dirname + '/language-icons'],
                     loader : 'babel-loader',
                     query  : {
                         cacheDirectory: true
