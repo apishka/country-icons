@@ -13,16 +13,15 @@
     
     
     module.exports = {
-        context: __dirname + '/language-icons',
+        context: __dirname,
         
         entry : {
-            index: ['webpack-dev-server/client?localhost:8080', "./index"]
+            index: ['webpack-dev-server/client?localhost:8080', "language-icons/index"]
         },
         output: {
             path      : __dirname + '/language-icons/build',
             filename  : "[name].js",
-            library   : "[name]",
-            publicPath: '/'
+            publicPath: ''
         },
         
         plugins: [
@@ -50,7 +49,7 @@
 
             new HtmlWebpackPlugin(
                 {
-                    template: 'index.html'
+                    template: 'language-icons/modules/page/main.html'
                 }
             ),
             

@@ -1,7 +1,6 @@
-var index =
 /******/ (function(modules) { // webpackBootstrap
-/******/ 	var parentHotUpdateCallback = this["webpackHotUpdate_name_"];
-/******/ 	this["webpackHotUpdate_name_"] = 
+/******/ 	var parentHotUpdateCallback = this["webpackHotUpdate"];
+/******/ 	this["webpackHotUpdate"] = 
 /******/ 	function webpackHotUpdateCallback(chunkId, moreModules) { // eslint-disable-line no-unused-vars
 /******/ 		hotAddUpdateChunk(chunkId, moreModules);
 /******/ 		if(parentHotUpdateCallback) parentHotUpdateCallback(chunkId, moreModules);
@@ -66,7 +65,7 @@ var index =
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "80db1141722a675a9b10"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "7a3423c5b0863825ec13"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -571,7 +570,7 @@ var index =
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "";
 
 /******/ 	// __webpack_hash__
 /******/ 	__webpack_require__.h = function() { return hotCurrentHash; };
@@ -592,7 +591,7 @@ var index =
 /* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var url = __webpack_require__(2);
+	/* WEBPACK VAR INJECTION */(function(__resourceQuery) {var url = __webpack_require__(2);
 	var stripAnsi = __webpack_require__(9);
 	var socket = __webpack_require__(11);
 
@@ -611,7 +610,7 @@ var index =
 	}
 
 	var urlParts;
-	if(false) {
+	if(true) {
 		// If this bundle is inlined, use the resource query to get the correct url.
 		urlParts = url.parse(__resourceQuery.substr(1));
 	} else {
@@ -721,6 +720,7 @@ var index =
 		}
 	}
 
+	/* WEBPACK VAR INJECTION */}.call(exports, "?localhost:8080"))
 
 /***/ },
 /* 2 */
