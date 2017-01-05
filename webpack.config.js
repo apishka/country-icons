@@ -16,10 +16,10 @@
         context: __dirname,
 
         entry : {
-            index: path.resolve('language-icons/index')
+            index: path.resolve('src/index')
         },
         output: {
-            path      : path.resolve('language-icons/build'),
+            path      : path.resolve('build'),
             filename  : "[name].js",
             publicPath: '/language-icons/build/'
         },
@@ -47,7 +47,7 @@
 
             new HtmlWebpackPlugin(
                 {
-                    template: 'language-icons/modules/page/main.html',
+                    template: 'src/modules/page/main.html',
                     filename: '../index.html'
                 }
             ),
@@ -57,7 +57,7 @@
 
         resolve: {
             root      : [
-                path.resolve('language-icons/modules'),
+                path.resolve('src/modules'),
                 path.resolve('node_modules')
             ],
             extensions: ["", ".js"]
@@ -74,7 +74,7 @@
             loaders: [
                 {
                     test   : /\.js$/,
-                    include: [__dirname + '/language-icons'],
+                    include: [__dirname + '/src'],
                     loader : 'babel-loader',
                     query  : {
                         cacheDirectory: true
