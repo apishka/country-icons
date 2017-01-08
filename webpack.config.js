@@ -25,11 +25,6 @@
         },
 
         plugins: [
-            new webpack.ProvidePlugin(
-                {
-                    angular: 'angular'
-                }
-            ),
             extractCSS,
 
             new webpack.NoErrorsPlugin(),
@@ -57,6 +52,7 @@
         ],
 
         resolve: {
+
             root      : [
                 __dirname,
                 path.resolve('src/modules'),
@@ -102,9 +98,7 @@
                     test  : /\.html$/,
                     loader: "raw-loader"
                 }
-            ],
-
-            noParse: [/\/(node_modules|bower_modules)\/(angular\/angular|jquery)/] // no search require, command for webpack
+            ]
         },
 
         devServer: {

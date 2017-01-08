@@ -1,12 +1,11 @@
-<html lang="en-US">
+<html lang="en-US" ng-app="app">
 <head>
     <meta charset="UTF-8">
     <title>Yzerlang</title>
 
     <link rel="stylesheet" href="Markup/dist/css/language-icons.css"/>
-    <link href="/language-icons/build/index.css" rel="stylesheet">
 </head>
-<body ng-app>
+<body>
 
 <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
     <div class="container">
@@ -19,35 +18,28 @@
     </div><!-- /.container -->
 </nav>
 
-<div id="container" class="container">
+<div id="container" class="container" ng-controller="langList">
     <div class="row row-offcanvas row-offcanvas-right">
         <div class="col-xs-12">
             <div class="input-group input-group-lg">
-                <input autofocus type="text" class="form-control" placeholder='Enter the language code, f.e "ar"'
+                <input autofocus type="text" class="form-control" ng-model="searchLang"
+                       placeholder='Enter the language code, f.e "ar"'
                        aria-describedby="sizing-addon1">
-                <span class="input-group-btn">
-                    <button class="btn btn-secondary" type="button">Search</button>
-                  </span>
             </div>
 
             <hr>
-            <label>Name:</label>
-            <input type="text" ng-model="yourName" placeholder="Enter a name here">
-            <hr>
-            <h1>Hello {{yourName}}!</h1>
-            <hr>
 
-            <div class="">
+            <div>
                 <div class="languages">
-
+                    <span ng-repeat="lang in list | filter:searchLang" class="lng lng-{{ lang }} _lg" title="{{ lang }}"
+                          id="{{ lang }}"></span>
                 </div>
-            </div><!--/span-->
-        </div><!--/span-->
+            </div>
+        </div>
     </div><!--/row-->
 
 </div>
 
-<script src="http://localhost:8080/webpack-dev-server.js"></script>
-<script type="text/javascript" src="/language-icons/build/index.js"></script>
+<script src="http://localhost:8080/webpack-dev-server.js"></script></script>
 </body>
 </html>

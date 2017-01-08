@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "serve": "webpack-dev-server --inline --hot --colors",
-    "build": "rm -rf language-icons/build && webpack-dev-server -p"
+    "build": "rm -rf build/ && webpack-dev-server -p"
   },
   "devDependencies": {
     "connect-livereload": "^0.6.0",
