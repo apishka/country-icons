@@ -5,4 +5,4 @@ import LangList from 'list';
 
 const app = angular.module('app', []);
 
-app.controller('langList', LangList);
+app.controller('langList', ['$scope', LangList]);
