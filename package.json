@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "serve": "webpack-dev-server --inline --hot --colors",
-    "build": "rm -rf build/ && webpack-dev-server -p"
+    "build": "rm -rf build/ && webpack -p"
   },
   "devDependencies": {
     "connect-livereload": "^0.6.0",
@@ -41,14 +41,12 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "file": "^0.2.2",
     "file-loader": "^0.9.0",
-    "html-webpack-plugin": "^2.26.0",
     "json": "^9.0.4",
     "json-loader": "^0.5.4",
     "less": "^2.7.2",
     "less-loader": "^2.2.3",
     "postcss": "^5.2.8",
     "postcss-loader": "^1.2.1",
-    "raw-loader": "^0.5.1",
     "style": "0.0.3",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",

@@ -7,7 +7,6 @@
     const path              = require('path');
     const isDev             = () => ENV === 'development';
     const ExtractTextPlugin = require("extract-text-webpack-plugin");
-    const HtmlWebpackPlugin = require('html-webpack-plugin');
 
     const languages  = require('./languages.json');
     const extractCSS = new ExtractTextPlugin('[name].css', { allChunks: true });
@@ -37,14 +36,6 @@
                         /node_modules\/.+\.js/,
                         'index.js'
                     ]
-                }
-            ),
-
-            new HtmlWebpackPlugin(
-                {
-                    template: 'src/modules/page/main.html',
-                    filename: '../index.html',
-                    language: languages.list
                 }
             ),
 
@@ -93,10 +84,6 @@
                 {
                     test  : /\.(png|gif|jpg|svg|ttf|eot|woff|woff2)$/,
                     loader: 'url?name=[path][name].[ext]?[hash]&limit=4096'
-                },
-                {
-                    test  : /\.html$/,
-                    loader: "raw-loader"
                 }
             ]
         },
