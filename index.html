@@ -9,37 +9,16 @@
 
 <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
     <div class="container">
-        <a class="navbar-brand" href="#">Yzerlang</a>
-        <ul class="nav navbar-nav">
-            <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
+        <a tabindex="-1" class="navbar-brand" href="#">Yzerlang</a>
     </div><!-- /.container -->
 </nav>
 
-<div id="container" class="container" ng-controller="langList">
+<div id="container" class="container">
     <div class="row row-offcanvas row-offcanvas-right">
-        <div class="col-xs-12">
-            <div class="input-group input-group-lg">
-                <input autofocus type="text" class="form-control" ng-model="searchLang"
-                       placeholder='Enter the language code, f.e "ar"'
-                       aria-describedby="sizing-addon1">
-            </div>
-
-            <hr>
-
-            <div>
-                <div class="languages">
-                    <span ng-repeat="lang in list | filter:searchLang" class="lng lng-{{ lang }} _lg" title="{{ lang }}"
-                          id="{{ lang }}"></span>
-                </div>
-            </div>
-        </div>
+        <div class="col-xs-12 ui-view"></div>
     </div><!--/row-->
 
 </div>
 
-<script src="http://localhost:8080/webpack-dev-server.js"></script>
 <script type="text/javascript" src="/language-icons/build/index.js"></script></body>
 </html>

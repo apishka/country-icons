@@ -1,0 +1,70 @@
+<div class="controller" ng-controller="lang">
+    <a tabindex="1" href="/language-icons/#!/" class="btn btn-secondary">Back</a>
+
+    <br/>
+    <br/>
+
+    <table class="sizes">
+        <tr>
+            <td><span class="lng lng-{{ lang }}"></span></td>
+            <td><code id="code-none">&lt;span class=&quot;lng lng-{{ lang }}&quot;&gt;&lt;/span&gt;</code>
+            </td>
+            <td>
+                <button class="btn btn-info Clip" data-clipboard-action="copy"
+                        data-clipboard-target="#code-none">
+                    Copy to clipboard
+                </button>
+            </td>
+        </tr>
+        <tr ng-repeat="size in sizes">
+            <td><span class="lng lng-{{ lang }} {{size}}"></span></td>
+            <td><code id="code-{{size}}">&lt;span class=&quot;lng lng-{{ lang }} {{size}}&quot;&gt;&lt;/span&gt;</code></td>
+            <td>
+                <button class="btn btn-info Clip" data-clipboard-action="copy" data-clipboard-target="#code-{{size}}">
+                    Copy to clipboard
+                </button>
+            </td>
+        </tr>
+    </table>
+
+    <br/>
+    <br/>
+
+    <div class="page-text">
+        <h2>Buttons</h2>
+        <div class="well">
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+            <button type="button" class="btn btn-primary"><span class="lng lng-{{ lang }}"></span> Primary</button>
+
+            <!-- Secondary, outline button -->
+            <button type="button" class="btn btn-secondary"><span class="lng lng-{{ lang }}"></span> Secondary</button>
+
+            <!-- Indicates a successful or positive action -->
+            <button type="button" class="btn btn-success"><span class="lng lng-{{ lang }}"></span> Success</button>
+
+            <!-- Contextual button for informational alert messages -->
+            <button type="button" class="btn btn-info"><span class="lng lng-{{ lang }}"></span> Info</button>
+
+            <!-- Indicates caution should be taken with this action -->
+            <button type="button" class="btn btn-warning"><span class="lng lng-{{ lang }}"></span> Warning</button>
+
+            <!-- Indicates a dangerous or potentially negative action -->
+            <button type="button" class="btn btn-danger"><span class="lng lng-{{ lang }}"></span> Danger</button>
+
+            <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+            <button type="button" class="btn btn-link"><span class="lng lng-{{ lang }}"></span> Link</button>
+        </div>
+
+        <br />
+        <br />
+
+        <h2>Links</h2>
+        <div class="well">
+            <a href="#">
+                <span class="lng lng-{{ lang }}"></span> English
+            </a>
+            <br />
+            <p>This is an example in the <span class="lng lng-tr"></span> Turkish language.</p>
+        </div>
+
+    </div>

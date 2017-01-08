@@ -1,0 +1,16 @@
+<div class="controller" ng-controller="langList">
+    <div class="input-group input-group-lg">
+        <input autofocus type="text" class="form-control" ng-model="searchLang"
+               placeholder='Enter the language code, f.e "ar"'
+               aria-describedby="sizing-addon1">
+    </div>
+
+    <hr>
+
+    <div class="languages">
+        <a ng-repeat="lang in list | filter:searchLang" href="/language-icons/#!/{{ lang }}">
+        <span class="lng lng-{{ lang }} _lg" title="{{ lang }}"
+              id="{{ lang }}"></span>
+        </a>
+    </div>
+</div>

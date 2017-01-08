@@ -1,3 +1,5 @@
+"use strict";
+
 import languages from 'languages.json';
 
 class LangList {
