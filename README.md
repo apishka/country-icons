@@ -1,8 +1,8 @@
-#### How use it
+## How use it
 
 An example how use it [here](https://apishka.github.io/language-icons/#!/).
 
-#### Installation
+## Installation
 
        bower install apishka/language-icons
        npm i language-icons
@@ -24,6 +24,6 @@ An example how use it [here](https://apishka.github.io/language-icons/#!/).
        }
 
 
-#### Example
+## Example
 
         <span class="lng lng-ar"></span> 
