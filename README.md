@@ -1,22 +1,29 @@
+#### How use it
 
-The following is a complete ISO 3166-1 alpha-2 encoding list of the countries flags which are assigned official codes.
+An example how use it [here](https://apishka.github.io/language-icons/#!/).
 
-Usage
+#### Installation
 
-<code>
-.lng .lng-$countriecode
-&lt;span class=&quot;lng lng-$countriecode&quot;&gt;&lt;/span&gt;
-</code>
+       bower install apishka/language-icons
+       npm i language-icons
+       
+       // in a generally less file
+       @import "bower_modules/language-icons/Markup/blocks/lng/lng.less";
+       @import "bower_modules/language-icons/Markup/blocks/lng/lng-list.less";
+       
+       // in grunt
+       copy: {
+            flags  : {
+               expand : true,
+               flatten: true,
+               src    : [
+                   'bower_modules/language-icons/Markup/blocks/lng/i/*'
+               ],
+               dest   : markupMain('dist/images/')
+           }
+       }
 
-Also we can user additional classes for icon sizes
-<code>
-.lng .lng-$countriecode ._$size
-&lt;span class=&quot;lng lng-ad _xs&quot;&gt;&lt;/span&gt;
-</code>
 
-Available size classes
-_xs
-_sm
-_md
-_lg
-_xlg
+#### Example
+
+        <span class="lng lng-ar"></span> 
