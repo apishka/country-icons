@@ -8,8 +8,7 @@ An example how use it [here](https://apishka.github.io/language-icons/#!/).
        npm i language-icons
        
        // in a generally less file
-       @import "bower_modules/language-icons/Markup/blocks/lng/lng.less";
-       @import "bower_modules/language-icons/Markup/blocks/lng/lng-list.less";
+       @import "bower_modules/language-icons/index.less";
        
        // in grunt
        copy: {
