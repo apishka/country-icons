@@ -1,6 +1,12 @@
 {
-  "name": "yzerlang",
-  "private": true,
+  "name": "country-icons",
+  "version": "1.0.0",
+  "description": "SVG country icons",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apishka/country-icons.git"
+  },
   "scripts": {
     "serve": "grunt proxy"
   },
