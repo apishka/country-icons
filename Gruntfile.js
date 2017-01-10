@@ -81,8 +81,8 @@ module.exports = function (grunt)
             less: {
                 languageicons: {
                     files: {
-                        'Markup/dist/css/language-icons.css': markupMain(
-                            'language-icons.less'
+                        'Markup/dist/css/country-icons.css': markupMain(
+                            'country-icons.less'
                         )
                     }
                 }
@@ -109,8 +109,8 @@ module.exports = function (grunt)
             cssmin: {
                 languageicons: {
                     files: {
-                        'Markup/dist/css/language-icons.css': [
-                            markupMain('dist/css/language-icons.css')
+                        'Markup/dist/css/country-icons.css': [
+                            markupMain('dist/css/country-icons.css')
                         ]
                     }
                 }
