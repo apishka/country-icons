@@ -20,7 +20,7 @@
         output: {
             path      : path.resolve('build'),
             filename  : "[name].js",
-            publicPath: '/language-icons/build/'
+            publicPath: '/country-icons/build/'
         },
 
         plugins: [
