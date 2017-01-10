@@ -4,12 +4,13 @@ An example how use it [here](https://apishka.github.io/language-icons/#!/).
 
 ## Installation
 
-       bower install apishka/language-icons
-       npm i language-icons
+       npm i country-icons -D // priority
+       bower install apishka/country-icons -D
+       
        
        // in a generally less file
        @import "bower_modules/language-icons/index.less";
-       // or if use scss
+       // or if use scss or css
        @import inline("bower_modules/language-icons/Markup/dist/css/language-icons.css");
        
        // in grunt
