@@ -9,9 +9,9 @@ An example how use it [here](https://apishka.github.io/country-icons/#!/).
        
        
        // in a generally less file
-       @import "bower_modules/country-icons/index.less";
+       @import "node_modules/country-icons/index.less";
        // or if use scss or css
-       @import inline("bower_modules/country-icons/Markup/dist/css/country-icons.css");
+       @import inline("node_modules/country-icons/Markup/dist/css/country-icons.css");
        
        // in grunt
        copy: {
@@ -19,7 +19,7 @@ An example how use it [here](https://apishka.github.io/country-icons/#!/).
                expand : true,
                flatten: true,
                src    : [
-                   'bower_modules/country-icons/Markup/blocks/lng/i/*'
+                   'node_modules/country-icons/Markup/blocks/lng/i/*'
                ],
                dest   : markupMain('dist/images/')
            }
