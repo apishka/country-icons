@@ -10,8 +10,10 @@ An example how use it [here](https://apishka.github.io/country-icons/#!/).
        
        // in a generally less file
        @import "node_modules/country-icons/index.less";
-       // or if use scss or css
-       @import inline("node_modules/country-icons/Markup/dist/css/country-icons.css");
+       // or if use scss
+       @import "node_modules/country-icons/Markup/dist/css/country-icons.scss";
+       // or css
+       @import "node_modules/country-icons/Markup/dist/css/country-icons.css";
        
        // in grunt
        copy: {
