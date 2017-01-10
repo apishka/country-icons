@@ -7,11 +7,13 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'global/style.less';
 import LangList from 'list';
 import LangPage from 'lang';
+import InstallPage from 'install';
 
 const app = angular.module('app', [uiRouter]);
 
 app
     .controller('langList', ['$scope', LangList])
+    .controller('installPage', ['$scope', InstallPage])
     .controller('lang', ['$scope', '$stateParams', LangPage])
     .config(
         [
@@ -25,6 +27,13 @@ app
                             url        : '/',
                             templateUrl: "src/modules/list/list.html",
                             controller : ['$scope', LangList]
+                        }
+                    )
+                    .state(
+                        'install', {
+                            url        : '/install',
+                            templateUrl: "src/modules/install/install.html",
+                            controller : ['$scope', InstallPage]
                         }
                     )
                     .state(
