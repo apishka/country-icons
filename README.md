@@ -1,6 +1,6 @@
 ## How use it
 
-An example how use it [here](https://apishka.github.io/language-icons/#!/).
+An example how use it [here](https://apishka.github.io/country-icons/#!/).
 
 ## Installation
 
@@ -9,9 +9,9 @@ An example how use it [here](https://apishka.github.io/language-icons/#!/).
        
        
        // in a generally less file
-       @import "bower_modules/language-icons/index.less";
+       @import "bower_modules/country-icons/index.less";
        // or if use scss or css
-       @import inline("bower_modules/language-icons/Markup/dist/css/language-icons.css");
+       @import inline("bower_modules/country-icons/Markup/dist/css/country-icons.css");
        
        // in grunt
        copy: {
@@ -19,7 +19,7 @@ An example how use it [here](https://apishka.github.io/language-icons/#!/).
                expand : true,
                flatten: true,
                src    : [
-                   'bower_modules/language-icons/Markup/blocks/lng/i/*'
+                   'bower_modules/country-icons/Markup/blocks/lng/i/*'
                ],
                dest   : markupMain('dist/images/')
            }
