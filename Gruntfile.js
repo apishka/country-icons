@@ -1,15 +1,15 @@
 module.exports = function (grunt)
 {
     var MARKUP_MAIN = 'Markup';
-    
+
     let fs   = require('fs'),
         path = require('path');
-    
+
     function markupMain(url)
     {
         return [MARKUP_MAIN, url || ''].join('/');
     }
-    
+
     function checkForNewerImports(lessFile, mTime, include)
     {
         fs.readFile(
@@ -18,15 +18,15 @@ module.exports = function (grunt)
                 let regex         = /@import "(.+?)(\.less)?";/g,
                     shouldInclude = false,
                     match;
-                
+
                 while ((match = regex.exec(data)) !== null)
                 {
                     let importFile = match[1] + '.less';
-                    
+
                     if (fs.existsSync(importFile))
                     {
                         let stat = fs.statSync(importFile);
-                        
+
                         if (stat.mtime > mTime)
                         {
                             shouldInclude = true;
@@ -38,13 +38,13 @@ module.exports = function (grunt)
             }
         );
     }
-    
+
     require('time-grunt')(grunt);
-    
+
     // load all grunt tasks matching the `grunt-*` pattern
     require('load-grunt-tasks')(grunt);
-    
-    
+
+
     // Project configuration.
     grunt.initConfig(
         {
@@ -59,13 +59,13 @@ module.exports = function (grunt)
                     }
                 }
             },
-            
+
             pkg: grunt.file.readJSON('package.json'),
-            
+
             clean: {
                 languageicons: 'compile'
             },
-            
+
             copy: {
                 languageicons: {
                     expand : true,
@@ -75,9 +75,26 @@ module.exports = function (grunt)
                         'blocks/**/*.{png,gif,jpg,jpeg,svg,ico}'
                     ],
                     dest   : markupMain('dist/images/')
+                },
+                scss         : {
+                    src : markupMain('dist/css/country-icons.css'),
+                    dest: markupMain('dist/css/country-icons.scss')
                 }
             },
-            
+
+            svgmin: {
+                dynamic: {
+                    files: [
+                        {
+                            expand: true,
+                            cwd   : markupMain('blocks/lng/i'),
+                            src   : ['*.svg'],
+                            dest  : markupMain('blocks/lng/i')
+                        }
+                    ]
+                }
+            },
+
             less: {
                 languageicons: {
                     files: {
@@ -87,9 +104,9 @@ module.exports = function (grunt)
                     }
                 }
             },
-            
+
             autoprefixer: {
-                options   : {
+                options      : {
                     browsers: [
                         "Android 2.3",
                         "Android >= 4",
@@ -105,7 +122,7 @@ module.exports = function (grunt)
                     src: markupMain('dist/css/*.css')
                 }
             },
-            
+
             cssmin: {
                 languageicons: {
                     files: {
@@ -115,7 +132,7 @@ module.exports = function (grunt)
                     }
                 }
             },
-            
+
             watch: {
                 styles    : {
                     files: [
@@ -136,7 +153,7 @@ module.exports = function (grunt)
                     }
                 }
             },
-            
+
             connect: {
                 server: {
                     options: {
@@ -151,14 +168,14 @@ module.exports = function (grunt)
             }
         }
     );
-    
+
     grunt.registerTask('css', ['newer:less', 'newer:autoprefixer']);
     grunt.registerTask('minify', ['newer:cssmin']);
-    
+
     // Default task(s).
-    grunt.registerTask('default', ['clean', 'newer:copy', 'css', 'minify']);
+    grunt.registerTask('default', ['clean', 'svgmin', 'copy', 'css', 'minify']);
     grunt.registerTask('dev', ['clean', 'newer:copy', 'css']);
-    
+
     // Helpers
     grunt.registerTask('serve', ['dev', 'connect', 'watch']);
     grunt.registerTask('proxy', ['dev', 'browserSync', 'watch:proxy']);
