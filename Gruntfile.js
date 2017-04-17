@@ -82,6 +82,19 @@ module.exports = function (grunt)
                 }
             },
 
+            svgmin: {
+                dynamic: {
+                    files: [
+                        {
+                            expand: true,
+                            cwd   : markupMain('blocks/lng/i'),
+                            src   : ['*.svg'],
+                            dest  : markupMain('blocks/lng/i')
+                        }
+                    ]
+                }
+            },
+
             less: {
                 languageicons: {
                     files: {
@@ -160,7 +173,7 @@ module.exports = function (grunt)
     grunt.registerTask('minify', ['newer:cssmin']);
 
     // Default task(s).
-    grunt.registerTask('default', ['clean', 'newer:copy', 'css', 'minify']);
+    grunt.registerTask('default', ['clean', 'svgmin', 'copy', 'css', 'minify']);
     grunt.registerTask('dev', ['clean', 'newer:copy', 'css']);
 
     // Helpers
